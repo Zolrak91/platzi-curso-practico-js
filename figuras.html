@@ -5,9 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figuras geométricas | Curso Práctico de JavaScript en Platzi</title>
+    <link rel="stylesheet" href="figuras.css">
 </head>
 <body>
-    <h1>Figuras geométricas</h1>
+    <header>
+        <h1>Figuras geométricas</h1>
+    </header>
+    <main>
+        <!-- CUADRADO -->
+        <section class="cuadrado">
+            <h3>Cuadrado</h3>
+            <div class="form-container">
+                <form action="">
+                    <label for="">Introduce la medida de los lados de tu cuadrado en centímetros:</label>
+                    <input type="number" name="" id="input-cuadrado" placeholder="Ejemplo: 5">
+                    <button onclick="calcularPerimetroCuadrado()">Calcular perímetro</button>
+                    <button onclick="calcularAreaCuadrado()">Calcular área</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- TRIANGULO -->
+        <section class="triangulo">
+            <h3>Triangulo</h3>
+            <div class="form-container">
+                <form action="">
+                    <label for="">Introduce la medida de la base del triangulo en centímetros:</label>
+                    <input type="number" name="" id="input-triangulo-base" placeholder="Ejemplo: 5">
+                    <label for="">Introduce la medida de un lado del triangulo en centímetros:</label>
+                    <input type="number" name="" id="input-triangulo-lado1" placeholder="Ejemplo: 5">
+                    <label for="">Introduce la medida del otro lado del triangulo en centímetros:</label>
+                    <input type="number" name="" id="input-triangulo-lado2" placeholder="Ejemplo: 5">
+                    <label for="">Introduce la medida de la altura del triangulo en centímetros (Requerido para el área):</label>
+                    <input type="number" name="" id="input-triangulo-altura" placeholder="Ejemplo: 5" step="0.01">
+                    <button onclick="calcularPerimetroTriangulo()">Calcular perímetro</button>
+                    <button onclick="calcularAreaTriangulo()">Calcular área</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- CIRCULO -->
+        <section class="circulo">
+            <h3>Triangulo</h3>
+            <div class="form-container">
+                <form action="">
+                    <label for="">Introduce radio del círculo en centímetros:</label>
+                    <input type="number" name="" id="input-radio" placeholder="Ejemplo: 5">
+                    <button onclick="calcularPerimetroCirculo()">Calcular perímetro</button>
+                    <button onclick="calcularAreaCirculo()">Calcular área</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
 
     <script src="./figuras.js"></script>
 </body>
