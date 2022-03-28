@@ -3,3 +3,45 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+header h1 {
+    text-align: center;
+}
+
+.card {
+    margin: 20px;
+    padding: 12px;
+    border: 1px solid black;
+}
+
+form > * {
+    display: block;
+    margin: 4px 0;
+}
+
+.form-container button {
+    display: inline;
+    padding: 4px;
+}
+
+@media (min-width:600px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
