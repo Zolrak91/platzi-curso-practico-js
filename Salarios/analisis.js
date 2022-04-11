@@ -1,3 +1,23 @@
+// HELPERS --------------------------------------------------------------------------------------
+
+// Determina si un numero es par
+function esPar(numero) {
+    return numero % 2 == 0; // Abrevia todo el if else en 1 linea
+};
+
+// Calcula el promedio de una lista de elementos
+function calcularPromedioLista(lista) {
+    const sumaLista = lista.reduce(
+        function (valorAcumulado = 0, nuevoElemento) {
+            return valorAcumulado + nuevoElemento;
+        }
+    );
+    const promedio = sumaLista / lista.length;
+    return promedio;
+};
+// -----------------------------------------------------------------------------------------------
+
+// Crea una lista que incluya unicamente los salarios, omitiendo el nombre
 const salariosCol = colombia.map(
     function (persona) {
         return persona.salary;
@@ -11,20 +31,7 @@ const salariosColSorted = salariosCol.sort(
     }
 );
 
-function esPar(numero) {
-    return numero % 2 == 0; // Abrevia todo el if else en 1 linea
-};
-
-function calcularPromedioLista(lista) {
-    const sumaLista = lista.reduce(
-        function (valorAcumulado = 0, nuevoElemento) {
-            return valorAcumulado + nuevoElemento;
-        }
-    );
-    const promedio = sumaLista / lista.length;
-    return promedio;
-};
-
+// Calcula la mediana de una lista de elementos
 function medianaSalarios (lista) {
     const mitad = parseInt(lista.length / 2);
     let mediana;
@@ -41,4 +48,15 @@ function medianaSalarios (lista) {
     }
 };
 
-console.log(medianaSalarios(salariosColSorted));
+const medianaGeneralCol = medianaSalarios(salariosColSorted);
+
+
+// Calcula la mediana del top 10%
+const spliceStart = (salariosColSorted.length * 90) / 100;
+const spliceAmount = salariosColSorted.length - spliceStart;
+
+const salariosTop10Col = salariosColSorted.splice(spliceStart, spliceAmount);
+const medianaTop10Col = medianaSalarios(salariosTop10Col);
+
+
+console.log(medianaGeneralCol, medianaTop10Col);
